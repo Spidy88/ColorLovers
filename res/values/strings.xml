@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Color Lovers</string>
+    <string name="nav_palettes">Palettes</string>
+    <string name="nav_colors">Colors</string>
+    <string name="nav_patterns">Patterns</string>
+    <string name="powered_by_desc">Powered by COLOURlovers.com</string>
+    <string name="nav_icon_desc">Navigation icon</string>
+    <string name="frag_navigation_tag">NavigationFragment</string>
+    <string name="navigation_drawer_open">Navigation Drawer Open</string>
+    <string name="navigation_drawer_close">Navigation Drawer Close</string>
+    <string name="palettes_list_empty_text">No palettes loaded</string>
+    <string name="refreshing_data">Refreshing data</string>
+
+</resources>
