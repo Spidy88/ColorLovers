@@ -26,20 +26,28 @@ public class NavigationFragment extends Fragment {
 	}
 	
 	private ListView mNavigationList = null;
+	private NavigationAdapter mAdapter = null;
 	private NavigationFragmentListener mListener = null;
+	private NavigationItem mSelectedItem = null;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_navigation, container, false);
 		
+		mAdapter = new NavigationAdapter(getActivity(), NAVIGATION_ITEMS);
 		mNavigationList = (ListView)rootView.findViewById(R.id.list_nav);
-		mNavigationList.setAdapter(new NavigationAdapter(getActivity(), NAVIGATION_ITEMS));
+		mNavigationList.setAdapter(mAdapter);
 		mNavigationList.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-				notifyNavigationItemSelected(NAVIGATION_ITEMS.get(position));
+				mSelectedItem = mAdapter.getItem(position);
+				notifyNavigationItemSelected(mSelectedItem);
 			}
 		});
+		
+		if( mSelectedItem != null ) {
+			setSelectedNavigationItem(mSelectedItem);
+		}
 		
 		return rootView;
 	}
@@ -51,5 +59,14 @@ public class NavigationFragment extends Fragment {
 		if( mListener != null ) {
 			mListener.onNavigationItemSelected(item);
 		}
+	}
+	
+	public void setSelectedNavigationItem(NavigationItem item) {
+		mSelectedItem = item;
+		if( mNavigationList != null ) {
+			mNavigationList.setSelection(mAdapter.getPosition(mSelectedItem));
+		}
+		
+		notifyNavigationItemSelected(mSelectedItem);
 	}
 }

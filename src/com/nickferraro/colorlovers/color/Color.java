@@ -14,12 +14,6 @@ public class Color {
 	private final int mRank;
 	private final Date mDateCreated;
 	private final String mHex;
-	private final RGB mRGB;
-	private final HSV mHSV;
-	private final String mUrl;
-	private final String mImageUrl;
-	private final String mBadgeUrl;
-	private final String mApiUrl;
 	
 	public Color(
 			String id,
@@ -32,13 +26,7 @@ public class Color {
 			int heartsCount,
 			int rank,
 			Date dateCreated,
-			String hex,
-			RGB rgb,
-			HSV hsv,
-			String url,
-			String imageUrl,
-			String badgeUrl,
-			String apiUrl) {
+			String hex) {
 		mId = id;
 		mTitle = title;
 		mDescription = description;
@@ -50,79 +38,49 @@ public class Color {
 		mRank = rank;
 		mDateCreated = dateCreated;
 		mHex = hex;
-		mRGB = rgb;
-		mHSV = hsv;
-		mUrl = url;
-		mImageUrl = imageUrl;
-		mBadgeUrl = badgeUrl;
-		mApiUrl = apiUrl;
 	}
 
-	public String getmId() {
+	public String getId() {
 		return mId;
 	}
 
-	public String getmTitle() {
+	public String getTitle() {
 		return mTitle;
 	}
 
-	public String getmDescription() {
+	public String getDescription() {
 		return mDescription;
 	}
 
-	public String getmUsername() {
+	public String getUsername() {
 		return mUsername;
 	}
 
-	public int getmViewCount() {
+	public int getViewCount() {
 		return mViewCount;
 	}
 
-	public int getmVoteCount() {
+	public int getVoteCount() {
 		return mVoteCount;
 	}
 
-	public int getmCommentCount() {
+	public int getCommentCount() {
 		return mCommentCount;
 	}
 
-	public int getmHeartsCount() {
+	public int getHeartsCount() {
 		return mHeartsCount;
 	}
 
-	public int getmRank() {
+	public int getRank() {
 		return mRank;
 	}
 
-	public Date getmDateCreated() {
+	public Date getDateCreated() {
 		return mDateCreated;
 	}
 
-	public String getmHex() {
+	public String getHex() {
 		return mHex;
-	}
-
-	public RGB getmRGB() {
-		return mRGB;
-	}
-
-	public HSV getmHSV() {
-		return mHSV;
-	}
-
-	public String getmUrl() {
-		return mUrl;
-	}
-
-	public String getmImageUrl() {
-		return mImageUrl;
-	}
-
-	public String getmBadgeUrl() {
-		return mBadgeUrl;
-	}
-
-	public String getmApiUrl() {
-		return mApiUrl;
 	}
 }

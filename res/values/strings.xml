@@ -11,5 +11,8 @@
     <string name="navigation_drawer_close">Navigation Drawer Close</string>
     <string name="palettes_list_empty_text">No palettes loaded</string>
     <string name="refreshing_data">Refreshing data</string>
+    <string name="icon_view_desc">Number of views</string>
+    <string name="icon_comment_desc">Number of comments</string>
+    <string name="icon_love_desc">Number of loves</string>
 
 </resources>

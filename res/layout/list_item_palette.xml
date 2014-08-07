@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp" >
+    
+    <TextView android:id="@+id/palette_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="start"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+    
+    <LinearLayout android:id="@+id/palette_colors"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:layout_below="@+id/palette_title">
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/palette_colors"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        
+        <TextView
+            android:id="@+id/palette_comments"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:gravity="end" />
+        
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:adjustViewBounds="true"
+	        android:scaleType="centerInside"
+	        android:src="@drawable/comment_icon"
+	        android:contentDescription="@string/icon_comment_desc" />
+	    
+	    <TextView
+	        android:id="@+id/palette_views"
+	        android:layout_width="25dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="2dp"
+	        android:gravity="end" />
+	    
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:adjustViewBounds="true"
+	        android:scaleType="centerInside"
+	        android:src="@drawable/view_icon"
+	        android:contentDescription="@string/icon_view_desc" />
+	    
+	    <TextView
+	        android:id="@+id/palette_loves"
+	        android:layout_width="25dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="2dp"
+	        android:gravity="end" />
+	    
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:adjustViewBounds="true"
+	        android:scaleType="centerInside"
+	        android:src="@drawable/love_icon"
+	        android:contentDescription="@string/icon_love_desc" />
+	    
+    </LinearLayout>
+</RelativeLayout>

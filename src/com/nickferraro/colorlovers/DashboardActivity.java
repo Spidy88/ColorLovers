@@ -8,7 +8,6 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.nickferraro.colorlovers.nav.NavigationFragment;
 import com.nickferraro.colorlovers.nav.NavigationFragmentListener;
@@ -42,6 +41,7 @@ public class DashboardActivity extends Activity implements NavigationFragmentLis
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 		
 		mNavigationFragment.setListener(this);
+		mNavigationFragment.setSelectedNavigationItem(NavigationFragment.NAV_ITEM_PALETTES);
 	}
 	
 	@Override
@@ -63,7 +63,6 @@ public class DashboardActivity extends Activity implements NavigationFragmentLis
 
 	@Override
 	public void onNavigationItemSelected(NavigationItem item) {
-		Toast.makeText(this, getString(item.getLabelRes()), Toast.LENGTH_SHORT).show();
 		mDrawerLayout.closeDrawers();
 		
 		if( NavigationFragment.NAV_ITEM_PALETTES.equals(item) ) {
