@@ -31,7 +31,7 @@
         
         <TextView
             android:id="@+id/palette_comments"
-            android:layout_width="25dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:gravity="end" />
@@ -46,7 +46,7 @@
 	    
 	    <TextView
 	        android:id="@+id/palette_views"
-	        android:layout_width="25dp"
+	        android:layout_width="40dp"
 	        android:layout_height="wrap_content"
 	        android:layout_marginRight="2dp"
 	        android:gravity="end" />
@@ -61,7 +61,7 @@
 	    
 	    <TextView
 	        android:id="@+id/palette_loves"
-	        android:layout_width="25dp"
+	        android:layout_width="40dp"
 	        android:layout_height="wrap_content"
 	        android:layout_marginRight="2dp"
 	        android:gravity="end" />

@@ -14,5 +14,6 @@
     <string name="icon_view_desc">Number of views</string>
     <string name="icon_comment_desc">Number of comments</string>
     <string name="icon_love_desc">Number of loves</string>
-
+    
+    <string name="url_palettes">http://www.colourlovers.com/api/palettes</string>
 </resources>
